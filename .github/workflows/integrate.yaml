@@ -20,8 +20,10 @@ jobs:
         node-version: '14.x'
     - name: Install Dependencies
       run: npm i -g @angular/cli
-    - name: Devkit
-      run: npm install @angular-devkit/build-angular
+    - name: Clean Node Modules
+      run: rm -rf node_modules package-lock.json
+    - name: Install Node Modules
+      run: npm install
     - name: Build
       run: ng build
     - name: Test
