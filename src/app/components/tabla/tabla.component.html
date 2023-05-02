@@ -1,0 +1,75 @@
+<!-- <p>{{ data | async }}</p> -->
+<table >
+    <tr>
+        
+        <ng-container matColumnDef="id" *ngIf="estadoColumna[0].status">
+            <th ><label>{{estadoColumna[0].name}}</label>
+            </th>
+        </ng-container>
+        <ng-container matColumnDef="full_name" *ngIf="estadoColumna[1].status">
+            <th ><label>{{estadoColumna[1].name}}</label>
+            </th>
+        </ng-container>
+        <ng-container matColumnDef="address" *ngIf="estadoColumna[2].status">
+            <th ><label>{{estadoColumna[2].name}}</label>
+            </th>
+        </ng-container>
+        <ng-container matColumnDef="phone_number" *ngIf="estadoColumna[3].status">
+            <th ><label>{{estadoColumna[3].name}}</label>
+            </th>
+        </ng-container>
+        <ng-container matColumnDef="email_address" *ngIf="estadoColumna[4].status">
+            <th ><label>{{estadoColumna[4].name}}</label>
+            </th>
+        </ng-container>
+        <ng-container matColumnDef="date" *ngIf="estadoColumna[5].status">
+            <th ><label>{{estadoColumna[5].name}}</label>
+            </th>
+        </ng-container>
+        <ng-container matColumnDef="campaing" *ngIf="estadoColumna[6].status">
+            <th ><label>{{estadoColumna[6].name}}</label>
+            </th>
+        </ng-container>
+        <ng-container matColumnDef="type" *ngIf="estadoColumna[7].status">
+            <th ><label>{{estadoColumna[7].name}}</label>
+            </th>
+        </ng-container>
+        <ng-container matColumnDef="options">
+            <th ></th>
+        </ng-container>
+    </tr>
+    
+    <tr *ngFor="let user of Users | seachFilterTable:searchByKeyword; ">
+        <ng-container *ngFor="let datos of user | keyvalue; let i = index;">
+            <td *ngIf="estadoColumna[i].status" >  
+                <label>
+                    {{regresarPos(user,estadoColumna[i].i).data}}
+                    <!-- {{ console.log(regresarPos(user,estadoColumna[i].i)) }}
+                    {{ console.log( estadoColumna[i] ) }}
+                    {{ console.log( estadoColumna[i].i ) }}
+                    {{ console.log( '-----------' ) }} -->
+                </label>
+            </td>
+        </ng-container>
+        
+        
+        <!-- <td *ngIf="estadoColumna[0].status" >  <label>{{user[0].value}} </label>
+        </td>
+        <td *ngIf="estadoColumna[1].status" >  <label>{{user[1].value}}</label>
+        </td>
+        <td *ngIf="estadoColumna[2].status" >  <label>{{user[2].value}}</label>
+        </td>
+        <td *ngIf="estadoColumna[3].status" >  <label>{{user[3].value}}</label>
+        </td>
+        <td *ngIf="estadoColumna[4].status" >  <label>{{user[4].value}}</label>
+        </td>
+        <td *ngIf="estadoColumna[5].status" >  <label>{{user[5].value}}</label>
+        </td>
+        <td *ngIf="estadoColumna[6].status" >  <label>{{user[6].value}}</label>
+        </td>
+        <td *ngIf="estadoColumna[7].status" >  <label>{{user[7].value}}</label>
+        </td>
+        <td >  <app-button_threePoints></app-button_threePoints></td> -->
+    </tr>
+    
+  </table>

@@ -1,0 +1,6 @@
+
+<!-- Actual search box -->
+<div class="form-group has-search">
+    <i class="bi bi-search"></i>
+    <input [(ngModel)]="searchText" type="text" class="form-control"  (ngModelChange)="autoSearch.emit(searchText)" placeholder="Search">
+</div>

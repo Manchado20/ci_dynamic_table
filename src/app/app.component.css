@@ -1,0 +1,46 @@
+
+.fondo {
+    padding: 3rem;
+}
+
+.fondo .cardGrande {
+    background-color: white;
+    background-color: white;
+}
+
+.franjaOscura {
+    background-color: #434547;
+    height: 2.5rem;
+}
+
+.colorContenido {
+    background-color: #f9fbfc;
+    /* background-color: black; */
+    padding: 2.3rem 4rem;
+}
+
+.contentCards {
+    display: grid; 
+    grid-auto-flow: 
+    column; margin: 25px 0px;
+}
+
+.card1 .card_porcentaje {
+    margin-left: auto!important;
+}
+.card2 .card_porcentaje {
+    width: 97%!important;
+}
+
+@media (max-width: 790px) {
+    .fondo {
+        padding: 1rem;
+    }
+    .contentCards {
+        display: flex;
+        flex-flow: column;
+    }
+    .colorContenido {
+        padding: 0rem 0rem;
+    }
+}

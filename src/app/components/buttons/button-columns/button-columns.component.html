@@ -1,0 +1,29 @@
+<div style="position: relative;
+display: contents;">
+    <button class="btn-columns" (click)="menuAccion()" >
+        <span>
+            <i class="bi bi-layout-three-columns"></i>
+        </span>
+        <label>
+            Columns
+        </label>
+    </button>
+    <div id="dropdown-menu-columns" class="dropdown-menu" *ngIf="open"  >
+        <div class="form-check" id="menucol{{i}}" [attr.data-index]="i" *ngFor="let titulo of titulos; let i = index" 
+        cdkDragHandle
+        draggable="true"
+        (dragstart)="handleDragStart($event)"
+        (dragenter)="handleDragEnter($event)"
+        (dragover)="handleDragOver($event)"
+        (dragleave)="handleDragLeave($event)"
+        (drop)="handleDrop($event)"
+        (dragend)="handleDragEnd($event)"
+        >
+          <input draggable="false" class="form-check-input" type="checkbox" value="" id="check_{{i}}" checked (change)="cambios($event)" [(ngModel)]="titulo.status" >
+          <label draggable="false" class="form-check-label" for="check_{{titulo.name}}">
+            {{titulo.name}}
+          </label>
+          <i class="bi bi-grid-3x3-gap-fill"></i> 
+        </div>
+    </div>
+</div>
