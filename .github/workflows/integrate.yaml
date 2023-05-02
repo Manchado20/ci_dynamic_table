@@ -21,6 +21,6 @@ jobs:
     - name: Install Dependencies
       run: npm install
     - name: Build
-      run: ng build --configuration=production
+      run: ng run build
     - name: Test
       run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
