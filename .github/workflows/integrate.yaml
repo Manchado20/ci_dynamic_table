@@ -19,9 +19,8 @@ jobs:
       with:
         node-version: '14.x'
     - name: Install Dependencies
-      run: npm ci
       run: npm install
     - name: Build
-      run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
-      run: ng run build --configuration=production
+      run: ng build --configuration=production
     - name: Test
+      run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
