@@ -19,9 +19,9 @@ jobs:
       with:
         node-version: 10
     - name: Install Dependencies
-      run: npm i
-      run: npm ci
-      run: npm test
+    - run: npm i
+    - run: npm ci
+    - run: npm test
     - name: Build
       run: npm run build 
     
