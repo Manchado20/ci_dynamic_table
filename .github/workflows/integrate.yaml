@@ -30,6 +30,6 @@ jobs:
       - name: Deploy
       id: wait
       uses: NeuraLegion/wait-for@release
-      github_tokentoken: ${{ secrets.GITHUB_TOKEN }}
+      github_token: ${{ secrets.GITHUB_TOKEN }}
     # - name: Test
     #   run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
