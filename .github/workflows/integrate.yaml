@@ -11,7 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js
@@ -27,9 +28,5 @@ jobs:
     - name: Build
       #run: ng build --configuration production
       run: ng build --output-path docs --base-href https://manchado20.github.io/ci_dynamic_table/
-      - name: Deploy
-      id: wait
-      uses: NeuraLegion/wait-for@release
-      github_token: ${{ secrets.GITHUB_TOKEN }}
-    # - name: Test
-    #   run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
+      # - name: Test
+      #   run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
