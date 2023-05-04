@@ -25,11 +25,11 @@ jobs:
     - name: Install Node Modules
       run: npm install
     - name: Build
-      run: ng build --configuration production
-      # run: ng build --output-path docs --base-href https://manchado20.github.io/ci_dynamic_table/
-      - name: Deploy
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist/aci_dynamic_table
+      # run: ng build --configuration production
+      run: ng build --output-path docs --base-href https://manchado20.github.io/ci_dynamic_table/
+      # - name: Deploy
+      # with:
+      #   github_token: ${{ secrets.GITHUB_TOKEN }}
+      #   publish_dir: dist/aci_dynamic_table
     # - name: Test
     #   run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
