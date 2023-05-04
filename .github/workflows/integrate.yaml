@@ -28,8 +28,6 @@ jobs:
       #run: ng build --configuration production
       run: ng build --output-path docs --base-href https://manchado20.github.io/ci_dynamic_table/
       - name: Deploy
-      if: success()
-      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: dist/aci_dynamic_table
