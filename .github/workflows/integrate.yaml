@@ -25,6 +25,6 @@ jobs:
     - name: Install Node Modules
       run: npm install
     - name: Build
-      run: ng build --prod
+      run: ng build --configuration production
     # - name: Test
     #   run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
