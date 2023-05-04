@@ -14,6 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
@@ -27,9 +30,4 @@ jobs:
     - name: Build
       # run: ng build --configuration production
       run: ng build --output-path docs --base-href https://manchado20.github.io/ci_dynamic_table/
-    - name: Deploy
-      uses: angular-schule/angular-cli-ghpages@v0.6.2
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: main
-        FOLDER: dist/dynamic_table
+    
