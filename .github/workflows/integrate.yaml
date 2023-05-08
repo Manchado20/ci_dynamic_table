@@ -26,7 +26,7 @@ jobs:
     - name: Install Dependencies
       run: npm i -g @angular/cli
     - name: Build
-      run: ng build --configuration production --output-path docs --base-href https://manchado20.github.io/docs/
+      run: ng build --configuration production --output-path docs --base-href "https://manchado20.github.io/ci_dynamic_table/docs/"
       # run: ng build --output-path docs --base-href https://manchado20.github.io/ci_dynamic_table/
       # - name: Test
       #   run: ng test --browsers=ChromeHeadless --no-watch --code-coverage --source-map=false
